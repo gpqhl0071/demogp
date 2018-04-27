@@ -1,6 +1,5 @@
 package com.gp.demogp.interceptor;
 
-import org.springframework.lang.Nullable;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +20,9 @@ public class MyInterceptor implements HandlerInterceptor {
 
   @Override
   public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    if(!HandlerMethod.class.isInstance(handler)){
+      return;
+    }
     HandlerMethod handlerMethod = (HandlerMethod) handler;
     Method method = handlerMethod.getMethod();
     long startTime = (Long) request.getAttribute("requestStartTime");
