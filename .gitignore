@@ -23,3 +23,5 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+/resources/application-prod.properties
