@@ -19,6 +19,14 @@ public class TableController {
   @Autowired
   private TableService tableService;
 
+  /**
+   * 获取表信息
+   *
+   * @return org.springframework.web.servlet.ModelAndView
+   * @param: []
+   * @author gao peng
+   * @date 2018/5/23 17:04
+   */
   @RequestMapping(path = "getTable")
   public ModelAndView getTable() {
     List tableList = tableService.queryTableName();
@@ -28,6 +36,14 @@ public class TableController {
     return modelAndView;
   }
 
+  /**
+   * 获取字段信息
+   *
+   * @return org.springframework.web.servlet.ModelAndView
+   * @param: [tableName]
+   * @author gao peng
+   * @date 2018/5/23 17:04
+   */
   @RequestMapping(path = "getColums/{tableName}")
   public ModelAndView getColums(@PathVariable String tableName) {
     List columsList = tableService.queryColoums(tableName);
