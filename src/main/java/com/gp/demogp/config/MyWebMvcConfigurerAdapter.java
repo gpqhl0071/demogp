@@ -3,10 +3,22 @@ package com.gp.demogp.config;
 import com.gp.demogp.interceptor.MyInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
 public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
+  /**
+   * 配置静态访问资源
+   *
+   * @param registry
+   */
+  @Override
+  public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/my/**").addResourceLocations("classpath:/my/");
+    super.addResourceHandlers(registry);
+  }
+
   /**
    * 拦截器
    *

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function getColums(tableName) {
+        window.location.href = "http://192.168.9.10:8080/table/getColums/" + tableName;
+    }
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<h1>DX数据库</h1>
+
+<div class="container" data-spy="scroll" data-target="#navbar-example" data-offset="0"
+     style="height:600px;overflow:auto; position: relative;">
+
+    <table class="table table-condensed">
+        <tr>
+            <td>表名称</td>
+            <td>表含义</td>
+            <td>操作</td>
+        </tr>
+
+        <tr th:each="table : ${tableList}">
+            <td th:text="${table.TABLE_NAME}" ></td>
+            <td th:text="${table.TABLE_COMMENT}">2</td>
+            <td><button th:onclick="'javascript:getColums(\''+${table.TABLE_NAME}+'\')'" class="btn btn-primary btn-xs">查看字段</button></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

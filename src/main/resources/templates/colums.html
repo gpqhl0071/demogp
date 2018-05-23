@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<div class="container">
+    <h1><p th:text="'表 '+${tableName}+'数据结构'">1</p></h1>
+    <table class="table table-hover">
+        <tr>
+            <td>字段名称</td>
+            <td>字段含义</td>
+            <td>类型</td>
+            <td>驼峰命名</td>
+        </tr>
+        <tr th:each="colums : ${columsList}">
+            <td th:text="${colums.COLUMN_NAME}">1</td>
+            <td th:text="${colums.COLUMN_COMMENT}">2</td>
+            <td th:text="${colums.DATA_TYPE}">2</td>
+            <td th:text="${colums.beanName}">2</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

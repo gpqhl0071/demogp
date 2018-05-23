@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-@EnableConfigurationProperties( {UserBean.class})
+//@EnableConfigurationProperties( {UserBean.class})
 public class DemogpApplication {
 
   public static void main(String[] args) {
