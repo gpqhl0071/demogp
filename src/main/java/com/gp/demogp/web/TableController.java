@@ -1,6 +1,8 @@
 package com.gp.demogp.web;
 
 import com.gp.demogp.service.TableService;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,6 +46,9 @@ public class TableController {
    * @author gao peng
    * @date 2018/5/23 17:04
    */
+  @ApiImplicitParams( {
+    @ApiImplicitParam(name = "tableName", value = "表明", required = true, dataType = "String")
+  })
   @RequestMapping(path = "getColums/{tableName}")
   public ModelAndView getColums(@PathVariable String tableName) {
     List columsList = tableService.queryColoums(tableName);
