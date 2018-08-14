@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gp.demogp.dao.TableInfo">
+
+    <select id="queryTableName" resultType="hashmap">
+        select t.TABLE_NAME,t.TABLE_COMMENT from information_schema.`TABLES` as t where t.TABLE_NAME like 't_%'
+    </select>
+
+    <select id="queryColoums" parameterType="String" resultType="hashmap">
+        select a.COLUMN_NAME,a.COLUMN_COMMENT,a.DATA_TYPE from information_schema.COLUMNS as a where a.TABLE_NAME = #{tableName}
+    </select>
+
+</mapper>
