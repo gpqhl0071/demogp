@@ -25,9 +25,9 @@ public class WithdrawController {
 
   @RequestMapping("/getInfo")
   public String getInfo() {
-    List<WithdrawBean> withdrawList = withdrawService.queryList();
-    for (WithdrawBean withdrawBean : withdrawList) {
-      log.info("读取记录：{}", withdrawBean.toString());
+    List<Map> list = withdrawService.queryList();
+    for (Map<String, Object> map : list) {
+      log.info("读取记录：{}", map.get("id"));
     }
 
     return "success";

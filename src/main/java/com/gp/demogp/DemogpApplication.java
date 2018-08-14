@@ -2,6 +2,7 @@ package com.gp.demogp;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.gp.demogp.bean.UserBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.sql.DataSource;
 
 @SpringBootApplication
+@MapperScan("com.gp.demogp.dao")
 //@EnableConfigurationProperties( {UserBean.class})
 public class DemogpApplication {
 

@@ -15,13 +15,7 @@ import java.util.Map;
  * @author gao peng
  * @date 2018/5/22 17:48
  */
-@Component
-@Mapper
 public interface WithdrawDao {
 
-  @Select("SELECT * from t_withdraw order by id desc limit 10")
-  @Results(id="withdrawMap", value={
-    @Result( property="id", column="id" ,id=true)
-  })
   public List<WithdrawBean> queryList();
 }
