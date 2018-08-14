@@ -1,6 +1,5 @@
-package com.gp.demogp;
+package com.gp.demogp.util;
 
-import com.gp.demogp.inter.DBConnector;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 

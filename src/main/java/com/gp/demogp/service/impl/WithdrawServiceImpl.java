@@ -1,7 +1,7 @@
 package com.gp.demogp.service.impl;
 
 import com.gp.demogp.bean.WithdrawBean;
-import com.gp.demogp.dao.WithdrawDao;
+import com.gp.demogp.mapper.WithdrawDao;
 import com.gp.demogp.service.WithdrawService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

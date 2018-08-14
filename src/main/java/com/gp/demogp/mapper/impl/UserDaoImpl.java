@@ -1,4 +1,4 @@
-package com.gp.demogp.dao.impl;
+package com.gp.demogp.mapper.impl;
 
 public class UserDaoImpl {
   public String queryList() {

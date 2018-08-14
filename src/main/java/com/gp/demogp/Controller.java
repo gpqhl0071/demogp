@@ -2,13 +2,11 @@ package com.gp.demogp;
 
 import com.gp.demogp.bean.SchoolBean;
 import com.gp.demogp.bean.UserBean;
-import com.gp.demogp.inter.DBConnector;
 import com.gp.demogp.service.UserService;
+import com.gp.demogp.util.DBConnector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;

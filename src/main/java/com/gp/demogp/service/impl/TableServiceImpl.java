@@ -1,6 +1,6 @@
 package com.gp.demogp.service.impl;
 
-import com.gp.demogp.dao.TableInfo;
+import com.gp.demogp.mapper.TableInfo;
 import com.gp.demogp.service.TableService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

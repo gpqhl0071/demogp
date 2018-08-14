@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-@MapperScan("com.gp.demogp.dao")
+@MapperScan("com.gp.demogp.mapper")
 //@EnableConfigurationProperties( {UserBean.class})
 public class DemogpApplication {
 

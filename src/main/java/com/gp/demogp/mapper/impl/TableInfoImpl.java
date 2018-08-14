@@ -1,9 +1,6 @@
-package com.gp.demogp.dao.impl;
+package com.gp.demogp.mapper.impl;
 
 import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author gao peng

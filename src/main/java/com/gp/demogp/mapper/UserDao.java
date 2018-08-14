@@ -1,6 +1,6 @@
-package com.gp.demogp.dao;
+package com.gp.demogp.mapper;
 
-import com.gp.demogp.dao.impl.UserDaoImpl;
+import com.gp.demogp.mapper.impl.UserDaoImpl;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Component;
