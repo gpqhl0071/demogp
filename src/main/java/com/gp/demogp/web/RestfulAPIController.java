@@ -1,5 +1,6 @@
 package com.gp.demogp.web;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(path = "/restfulAPIController")
+@Api(value="用户controller",tags={"用户操作接口"})
 public class RestfulAPIController {
 
   @ApiOperation(value = "测试接口", notes = "测试接口DEMO")
