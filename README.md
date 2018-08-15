@@ -7,6 +7,6 @@
 - 适配器 `MyWebMvcConfigurerAdapter` 用于实现重定向静态页面地址
 - 对接mybatis `*\demogp\src\main\resources\mybatis`
 - 数据库连接，环境变量切换 `spring.profiles.active=dev`
-
+- 引入swagger2，自动生成api文档，访问路径:http://localhost:8080/swagger-ui.html
 
 
